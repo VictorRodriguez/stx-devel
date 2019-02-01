@@ -8,11 +8,12 @@ declare -a arr=("stx-config" "stx-distcloud"
 
 for i in "${arr[@]}"
 do
-    if [ ! -d $i ]
+    if [ -d $i ]
     then
-    git clone $REPO$i
+        cd $i
+        git pull
+        cd ..
     fi
-    echo $i cloned
+    echo $i updated
 done
 
-echo "Clone complete"
