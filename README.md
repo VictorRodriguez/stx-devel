@@ -46,4 +46,22 @@ instructions to build an image:
 if you are under a proxy please set up in proxy.conf as:
 ```http://<addrs>:port``
 
+## If I want to send a change to review 
+
+First review the basic sanity tests before submiting, 
+go into the repository you want and run
+
+```
+tox -c doc
+
+```
+
+Or 
+```
+tox -e pep8
+
+```
+
+
+
 
